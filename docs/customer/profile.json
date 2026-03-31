@@ -1,107 +1,96 @@
 {
   "profile": {
-    "companyName": "宜昌长机科技有限责任公司",
-    "shortName": "长机科技",
-    "isListed": false,
-    "stockCode": "",
-    "website": "https://www.cjmt.com.cn/",
-    "industry": "装备制造",
-    "subIndustry": "机床工具/齿轮加工装备",
-    "scale": "中型企业",
-    "mainBusiness": "数控齿轮加工机床研发制造",
+    "companyName": "阳光电源股份有限公司",
+    "shortName": "阳光电源 / Sungrow",
+    "isListed": true,
+    "stockCode": "300274",
+    "website": "https://www.sungrowpower.com",
+    "industry": "新能源 / 光伏",
+    "subIndustry": "光伏逆变器、储能系统",
+    "scale": "大型企业",
+    "mainBusiness": "光伏逆变器研发制造、储能系统集成、风电变流器、新能源汽车驱动、氢能装备",
     "products": [
-      { "name": "数控插齿机", "description": "工信部认定单项冠军产品，覆盖Φ120mm-Φ5000mm全系列" },
-      { "name": "数控滚齿机", "description": "加工直径Φ500mm-Φ6000mm，适用于能源、交通、重型机械" },
-      { "name": "数控铣齿机", "description": "加工直径Φ800mm-Φ8000mm，适用于风电、回转支承、矿山机械" },
-      { "name": "齿条加工设备", "description": "齿条插齿/铣齿/磨齿机，适用于工程机械、电梯、汽车转向器" },
-      { "name": "刮齿机系列", "description": "高效率新型制齿设备，比插齿快3-5倍" }
+      { "name": "光伏逆变器", "description": "串式逆变器、模块化逆变器，工商业及电网级应用" },
+      { "name": "储能系统", "description": "工商业储能系统、电网级储能系统、功率转换系统(PCS)" },
+      { "name": "风电变流器", "description": "双馈及全功率风电流转换器" },
+      { "name": "充电桩", "description": "新能源汽车充电设备" }
     ],
     "targetCustomers": [
-      "风电装备制造",
-      "工程机械企业",
-      "汽车转向器厂商",
-      "回转支承制造",
-      "矿山冶金企业",
-      "电梯制造行业"
+      "光伏电站开发商",
+      "工商业用户",
+      "电网公司",
+      "风电商",
+      "储能项目运营商"
     ],
-    "businessModel": "B2B装备制造+售后技术服务",
-    "rating": "A",
+    "businessModel": "设备制造（B2B）",
+    "rating": "AAA级",
     "tags": [
-      "国家级专精特新重点小巨人",
-      "国家级单项冠军",
-      "高新技术企业",
-      "国家机床工具行业重点骨干企业",
-      "湖北省工程技术研究中心",
-      "两化融合示范企业",
-      "DCMM数据管理能力认证",
-      "智能制造国家队"
+      "全球第一光伏逆变器",
+      "储能龙头",
+      "清洁能源设备",
+      "上市公司300274",
+      "高新技术企业"
     ],
-    "summary": "国家机床工具行业重点骨干企业，专业生产全系列数控插齿机、滚齿机、铣齿机等制齿设备，是中国唯一的全系列和最大型插齿机制造基地",
+    "summary": "全球清洁能源设备龙头，专注光伏逆变器、储能系统等核心电力电子装备，电力电子转换器累计安装量870GW，多项产品全球第一",
 
     "registration": {
-      "foundedDate": "1968年（前身为长江机床厂）",
-      "registeredCapital": "1460万人民币",
+      "foundedDate": "1997年",
+      "registeredCapital": "约14.5亿元",
       "paidInCapital": "",
-      "ownershipType": "国有背景改制企业[假设待验证]",
+      "ownershipType": "股份有限公司（上市公司）",
       "branches": {
-        "count": "",
-        "locations": []
+        "count": "20+国际子公司",
+        "locations": ["合肥（总部）", "上海", "德国", "美国", "印度", "巴西"]
       },
       "legalRisks": "无",
       "operatingAnomalies": "无",
       "penalties": "无",
-      "summary": "从1968年长江机床厂演变至今，超50年行业积淀；总资产5亿余元但注册资本仅1460万；净资产4.2亿占总资产84%显示资产结构健康，负债率低"
+      "summary": "阳光电源1997年成立于安徽合肥，创始人曹仁贤，创业板上市（300274），中国光伏逆变器行业开创者之一，全球光伏逆变器出货量第一"
     },
 
     "policyAnalysis": {
-      "isSpecialized": true,
-      "isDigitalTransformation": true,
-      "isESG": false,
+      "isSpecialized": null,
+      "isDigitalTransformation": null,
+      "isESG": true,
       "isHighTech": true,
-      "policySupportLevel": "高：国家级专精特新小巨人+单项冠军+智能制造国家队",
-      "leverageStrategy": "依托国家级示范企业身份，对接工信部智能制造试点政策；利用DCMM认证基础推进数据治理项目"
+      "policySupportLevel": "高：深耕新能源/光伏赛道，符合国家双碳政策方向",
+      "leverageStrategy": "切入供应链管理数字化和设备预测性维护方向"
     },
 
     "timing": {
-      "currentPhase": "数字化深化与智能制造升级期",
-      "evidence": "2025年通过DCMM数据管理能力贯标认证；获评湖北省两化融合示范企业；2025-2026校招扩招配合业务扩张",
-      "entryStrategy": "趁DCMM认证后数据管理意识觉醒期切入，推荐数据驱动的生产/质量/设备一体化方案；可对接西门子生态降低准入门槛"
+      "currentPhase": "快速增长期",
+      "evidence": "光伏组件价格下跌刺激装机需求；储能市场爆发（政策强制配储）；海外欧洲、东南亚、中东需求强劲",
+      "entryStrategy": "切入供应链管理数字化、设备预测性维护方向"
     },
 
     "creditRisk": {
-      "legalRisk": "低：无诉讼、失信、行政处罚记录",
-      "operationalRisk": "低：AAA级银行资信，净资产4.2亿资产结构健康",
-      "creditRating": "AAA",
+      "legalRisk": "低：新能源龙头上市公司，基本面良好，未公开重大负面司法记录",
+      "operationalRisk": "低：运营稳健，国际业务扩张中",
+      "creditRating": "AAA级",
       "warnings": [],
-      "salesAdvice": "资信优质，可放心合作；决策链较规范需从技术部门切入"
+      "salesAdvice": "公司运营成熟，但供应链复杂度高，存在数字化优化空间；建议从设备运维+供应链协同方向切入"
     },
 
     "organization": {
-      "type": "职业化管理+国有背景[假设待验证]",
-      "decisionChain": "技术部门提出需求→生产/质量部门会签→采购部门评估→高层审批决策[假设待验证]",
+      "type": "上市公司集团",
+      "decisionChain": "创始人/董事长曹仁贤→总裁→各业务线VP→区域/子公司",
       "keyPersons": [
-        { "name": "叶又生", "title": "董事长" },
-        { "name": "唐兆庆", "title": "总经理" },
-        { "name": "钟瑞龄", "title": "总工程师" },
-        { "name": "瞿祖训", "title": "副总经理（生产）" },
-        { "name": "胡天明", "title": "副总经理" },
-        { "name": "段作东", "title": "董事、党委书记" },
-        { "name": "彭玲", "title": "董事" },
-        { "name": "戴圣荣", "title": "董事" }
+        { "name": "曹仁贤", "title": "创始人/董事长" }
       ],
-      "salesStrategy": "从技术切入，强调智能制造升级与数据管理能力契合其国家级示范企业定位；推荐DCMM数据管理、生产追溯、质量管控类方案；重视西门子等国际品牌背书"
+      "salesStrategy": "设备直销+渠道分销，国内+海外双轮驱动，与EPC厂商、开发商深度合作"
     },
 
     "strategy": {
-      "phase": "数字化深化与智能制造升级期",
-      "growthStage": "扩张期：2025-2026校招扩招，总装车间设备升级",
-      "competitivePosition": "国内插齿机细分领域第一",
-      "digitalMaturity": "中高：已通过DCMM认证，两化融合示范企业",
-      "analysisPath": "A+B",
+      "phase": "快速增长期",
+      "growthStage": "扩张期：全球业务扩张中",
+      "competitivePosition": "全球第一光伏逆变器供应商，储能系统出货全球前三",
+      "digitalMaturity": "中",
+      "analysisPath": "B+（基于公开数据推演）",
       "informationQuality": "75%",
       "expansionSignals": [
-        "2025-2026校园招聘正在进行中",
-        "总装车间已完成设备调试与检验阶段升级"
+        "全球20+子公司，本土化运营",
+        "6个研发中心（合肥、上海、德国、美国、印度、巴西）",
+        "国际业务扩张中"
       ],
       "contractionSignals": [],
       "riskSignals": []
@@ -109,44 +98,46 @@
 
     "techStack": {
       "current": [],
-      "inferred": ["西门子数控系统", "DCMM数据管理"],
+      "inferred": ["电力电子技术", "光伏逆变器技术", "储能系统集成"],
       "maturity": "中",
-      "direction": "数据驱动+智能制造"
+      "direction": "清洁能源设备智能化"
     },
 
     "keyMetrics": [
-      { "name": "总资产", "value": "5亿余元" },
-      { "name": "净资产", "value": "超4.2亿元" },
-      { "name": "占地面积", "value": "24万平米" },
-      { "name": "厂房面积", "value": "15万平米" }
+      { "name": "电力电子转换器累计安装量", "value": "870GW" },
+      { "name": "业务覆盖国家", "value": "150+" },
+      { "name": "研发人员", "value": "超4000人" }
     ],
 
     "painPoints": [
-      { "area": "生产管理", "description": "多品种小批量定制化生产，排产复杂，进度跟踪依赖人工[假设待验证]", "severity": "中" },
-      { "area": "质量管理", "description": "关键工序依赖工人经验，质量一致性难以保障，客诉追溯困难[假设待验证]", "severity": "高" },
-      { "area": "设备管理", "description": "恒温装配、整机联机等关键设备维护依赖经验，预测性维护能力不足[假设待验证]", "severity": "中" },
-      { "area": "成本核算", "description": "定制化产品成本核算复杂，报价缺乏数据支撑，利润空间不透明[假设待验证]", "severity": "中" },
-      { "area": "供应链管理", "description": "关键部件供应商筛选严格，但供应商质量追溯和协同管理仍需提升[假设待验证]", "severity": "中" }
+      { "area": "供应链管理", "description": "供应商众多（上游电子元器件、原材料），来料质量追溯、采购对账效率提升需求明显", "severity": "高" },
+      { "area": "生产管理", "description": "逆变器、储能柜等设备组装产线自动化程度已较高，但排产优化、柔性生产有提升空间", "severity": "中" },
+      { "area": "设备管理", "description": "出厂设备（尤其储能系统）需要远程运维、预测性维护、故障预警能力", "severity": "高" },
+      { "area": "成本核算", "description": "元器件成本占比高，供应链成本管控、报价工具需求存在", "severity": "中" },
+      { "area": "订单管理", "description": "海外订单交付周期长，跨境项目交期跟踪、客户门户需求", "severity": "中" }
     ],
 
     "opportunities": [
-      { "area": "智能制造升级", "description": "依托智能制造国家队和两化融合示范企业身份，推进MES/APS/数字孪生项目", "likelihood": "高" },
-      { "area": "数据治理深化", "description": "基于DCMM认证基础，扩展数据中台、BI分析、预测性维护应用", "likelihood": "中" },
-      { "area": "质量管理升级", "description": "结合严格制件和恒温装配工艺要求，建设QMS和全流程追溯系统", "likelihood": "高" }
+      { "area": "SRM供应商管理", "description": "建立供应商门户，实现订单协同、质量追溯、对账自动化", "likelihood": "高" },
+      { "area": "设备IoT+预测维护", "description": "储能系统/逆变器远程监控、寿命预测、故障预警服务化", "likelihood": "高" },
+      { "area": "APS高级排程", "description": "多产品线混产排程优化，减少订单延误", "likelihood": "中" },
+      { "area": "WMS智能仓储", "description": "元器件按需管理、库存预警、呆滞料识别", "likelihood": "中" },
+      { "area": "成本核算系统", "description": "产品线成本精细化核算，支持报价决策", "likelihood": "中" }
     ],
 
     "hiring": {
       "keySignals": [
-        "2026校园招聘正在进行中，显示企业处于人才扩张期",
-        "关键技术工人送德国西门子培训认证，重视高端技能人才培养"
+        "全球20+子公司，本土化运营",
+        "6个研发中心（合肥、上海、德国、美国、印度、巴西）",
+        "招聘以研发技术岗为主（电力电子、软件、电气）"
       ]
     },
 
     "competition": {
-      "industryRank": "国内插齿机细分领域第一",
-      "marketShare": "中国唯一的全系列和最大型插齿机制造基地",
-      "mainCompetitors": ["重庆机床集团", "南京二机床", "Gleason", "Liebherr"],
-      "knownClients": []
+      "industryRank": "全球第一光伏逆变器供应商",
+      "marketShare": "中国光伏逆变器市场份额约30%+，全球约15-20%",
+      "mainCompetitors": ["华为数字能源", "锦浪科技", "固德威", "SMA（德国）", "SolarEdge（美国）"],
+      "knownClients": ["国电投", "华能", "大唐", "三峡集团", "国际能源企业"]
     },
 
     "salesGuide": null,
@@ -156,12 +147,12 @@
     "budget": null,
 
     "metadata": {
-      "createdAt": "2025-03-25T00:00:00.000Z",
-      "updatedAt": "2025-03-25T10:00:00.000Z",
+      "createdAt": "2026-03-31T00:00:00.000Z",
+      "updatedAt": "2026-03-31T00:00:00.000Z",
       "createdBy": "AI",
-      "version": "1.1",
-      "sources": ["https://www.cjmt.com.cn/", "宜昌市总工会官网", "媒体公开报道"],
-      "confidence": 85
+      "version": "1.0",
+      "sources": ["公开市场数据"],
+      "confidence": 75
     }
   }
 }
