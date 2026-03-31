@@ -10,19 +10,21 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as PreviewIndexRouteImport } from './routes/preview/index'
+import { Route as PipelineIndexRouteImport } from './routes/pipeline/index'
 import { Route as CustomersIndexRouteImport } from './routes/customers/index'
-import { Route as PreviewListPageRouteImport } from './routes/preview/list-page'
-import { Route as PreviewDashboardRouteImport } from './routes/preview/dashboard'
+import { Route as ActivitiesIndexRouteImport } from './routes/activities/index'
+import { Route as PipelineIdRouteImport } from './routes/pipeline/$id'
+import { Route as CustomersIdRouteImport } from './routes/customers/$id'
+import { Route as ActivitiesIdRouteImport } from './routes/activities/$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PreviewIndexRoute = PreviewIndexRouteImport.update({
-  id: '/preview/',
-  path: '/preview/',
+const PipelineIndexRoute = PipelineIndexRouteImport.update({
+  id: '/pipeline/',
+  path: '/pipeline/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CustomersIndexRoute = CustomersIndexRouteImport.update({
@@ -30,69 +32,93 @@ const CustomersIndexRoute = CustomersIndexRouteImport.update({
   path: '/customers/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PreviewListPageRoute = PreviewListPageRouteImport.update({
-  id: '/preview/list-page',
-  path: '/preview/list-page',
+const ActivitiesIndexRoute = ActivitiesIndexRouteImport.update({
+  id: '/activities/',
+  path: '/activities/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PreviewDashboardRoute = PreviewDashboardRouteImport.update({
-  id: '/preview/dashboard',
-  path: '/preview/dashboard',
+const PipelineIdRoute = PipelineIdRouteImport.update({
+  id: '/pipeline/$id',
+  path: '/pipeline/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CustomersIdRoute = CustomersIdRouteImport.update({
+  id: '/customers/$id',
+  path: '/customers/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ActivitiesIdRoute = ActivitiesIdRouteImport.update({
+  id: '/activities/$id',
+  path: '/activities/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/preview/dashboard': typeof PreviewDashboardRoute
-  '/preview/list-page': typeof PreviewListPageRoute
+  '/activities/$id': typeof ActivitiesIdRoute
+  '/customers/$id': typeof CustomersIdRoute
+  '/pipeline/$id': typeof PipelineIdRoute
+  '/activities/': typeof ActivitiesIndexRoute
   '/customers/': typeof CustomersIndexRoute
-  '/preview/': typeof PreviewIndexRoute
+  '/pipeline/': typeof PipelineIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/preview/dashboard': typeof PreviewDashboardRoute
-  '/preview/list-page': typeof PreviewListPageRoute
+  '/activities/$id': typeof ActivitiesIdRoute
+  '/customers/$id': typeof CustomersIdRoute
+  '/pipeline/$id': typeof PipelineIdRoute
+  '/activities': typeof ActivitiesIndexRoute
   '/customers': typeof CustomersIndexRoute
-  '/preview': typeof PreviewIndexRoute
+  '/pipeline': typeof PipelineIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/preview/dashboard': typeof PreviewDashboardRoute
-  '/preview/list-page': typeof PreviewListPageRoute
+  '/activities/$id': typeof ActivitiesIdRoute
+  '/customers/$id': typeof CustomersIdRoute
+  '/pipeline/$id': typeof PipelineIdRoute
+  '/activities/': typeof ActivitiesIndexRoute
   '/customers/': typeof CustomersIndexRoute
-  '/preview/': typeof PreviewIndexRoute
+  '/pipeline/': typeof PipelineIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/preview/dashboard'
-    | '/preview/list-page'
+    | '/activities/$id'
+    | '/customers/$id'
+    | '/pipeline/$id'
+    | '/activities/'
     | '/customers/'
-    | '/preview/'
+    | '/pipeline/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/preview/dashboard'
-    | '/preview/list-page'
+    | '/activities/$id'
+    | '/customers/$id'
+    | '/pipeline/$id'
+    | '/activities'
     | '/customers'
-    | '/preview'
+    | '/pipeline'
   id:
     | '__root__'
     | '/'
-    | '/preview/dashboard'
-    | '/preview/list-page'
+    | '/activities/$id'
+    | '/customers/$id'
+    | '/pipeline/$id'
+    | '/activities/'
     | '/customers/'
-    | '/preview/'
+    | '/pipeline/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  PreviewDashboardRoute: typeof PreviewDashboardRoute
-  PreviewListPageRoute: typeof PreviewListPageRoute
+  ActivitiesIdRoute: typeof ActivitiesIdRoute
+  CustomersIdRoute: typeof CustomersIdRoute
+  PipelineIdRoute: typeof PipelineIdRoute
+  ActivitiesIndexRoute: typeof ActivitiesIndexRoute
   CustomersIndexRoute: typeof CustomersIndexRoute
-  PreviewIndexRoute: typeof PreviewIndexRoute
+  PipelineIndexRoute: typeof PipelineIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -104,11 +130,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/preview/': {
-      id: '/preview/'
-      path: '/preview'
-      fullPath: '/preview/'
-      preLoaderRoute: typeof PreviewIndexRouteImport
+    '/pipeline/': {
+      id: '/pipeline/'
+      path: '/pipeline'
+      fullPath: '/pipeline/'
+      preLoaderRoute: typeof PipelineIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/customers/': {
@@ -118,18 +144,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CustomersIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/preview/list-page': {
-      id: '/preview/list-page'
-      path: '/preview/list-page'
-      fullPath: '/preview/list-page'
-      preLoaderRoute: typeof PreviewListPageRouteImport
+    '/activities/': {
+      id: '/activities/'
+      path: '/activities'
+      fullPath: '/activities/'
+      preLoaderRoute: typeof ActivitiesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/preview/dashboard': {
-      id: '/preview/dashboard'
-      path: '/preview/dashboard'
-      fullPath: '/preview/dashboard'
-      preLoaderRoute: typeof PreviewDashboardRouteImport
+    '/pipeline/$id': {
+      id: '/pipeline/$id'
+      path: '/pipeline/$id'
+      fullPath: '/pipeline/$id'
+      preLoaderRoute: typeof PipelineIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/customers/$id': {
+      id: '/customers/$id'
+      path: '/customers/$id'
+      fullPath: '/customers/$id'
+      preLoaderRoute: typeof CustomersIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/activities/$id': {
+      id: '/activities/$id'
+      path: '/activities/$id'
+      fullPath: '/activities/$id'
+      preLoaderRoute: typeof ActivitiesIdRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -137,10 +177,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  PreviewDashboardRoute: PreviewDashboardRoute,
-  PreviewListPageRoute: PreviewListPageRoute,
+  ActivitiesIdRoute: ActivitiesIdRoute,
+  CustomersIdRoute: CustomersIdRoute,
+  PipelineIdRoute: PipelineIdRoute,
+  ActivitiesIndexRoute: ActivitiesIndexRoute,
   CustomersIndexRoute: CustomersIndexRoute,
-  PreviewIndexRoute: PreviewIndexRoute,
+  PipelineIndexRoute: PipelineIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
