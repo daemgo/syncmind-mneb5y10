@@ -1,359 +1,545 @@
 {
   "currentVersion": "v0.1",
   "status": "draft",
-
-  "versions": [],
-
+  "versions": [
+    {
+      "version": "v0.1",
+      "createdAt": "2026-03-31T00:00:00.000Z",
+      "trigger": "cold-start",
+      "inputSummary": "基于阳光电源档案推演，全球清洁能源设备龙头，全球第一光伏逆变器供应商，储能系统出货全球前三，电力电子转换器累计安装量870GW",
+      "changeSummary": [
+        "从档案推演8条业务需求：SRM供应商管理、设备IoT+预测维护、APS高级排程、成本核算系统、海外项目交付平台、质量管理、WMS智能仓储、服务履约管理",
+        "从档案推演4条技术需求：主数据治理、系统集成、数据分析平台、工业物联网平台",
+        "识别信息缺口5条必问+5条选问",
+        "计算冷启动阶段完成度约22%"
+      ]
+    }
+  ],
   "current": {
-    "salesInput": {
-      "salesPerson": "",
-      "lastUpdated": "2026-03-25",
-      "overallAssessment": {
-        "customerIntent": "数字化转型深化期，明确表达EAM系统建设需求",
-        "projectUrgency": "正常：26年年底上线，时间充裕",
-        "budgetSituation": "已确认：100万（已审批）",
-        "competitionStatus": "有竞对：在对比SaaS产品与定制开发",
-        "winProbability": "中高：定制开发是我们的机会",
-        "keyObstacles": ["需快速出方案抢占先机", "SaaS产品竞对情况待了解"],
-        "confidenceLevel": "中"
-      },
-      "keyPersons": [],
-      "realNeeds": {
-        "explicitNeeds": ["EAM企业资产管理系统"],
-        "implicitNeeds": ["设备维护经验知识化", "预测性维护能力提升"],
-        "suspectedNeeds": ["与现有西门子系统集成", "移动端巡检"],
-        "needsNotMentioned": []
-      },
-      "decisionFactors": {
-        "primaryFactor": "待确认",
-        "secondaryFactors": [],
-        "dealBreakers": []
-      },
-      "notes": "客户处于DCMM认证后的数字化深化期，设备管理是制造企业核心痛点",
-      "concerns": [],
-      "suggestions": []
-    },
-
-    "sources": {
-      "meetings": [],
-      "documents": [],
-      "communications": [
-        "2026-03-25: 销售反馈客户有EAM系统需求",
-        "2026-03-25: 客户反馈预算100万（已审批），要求26年年底上线，在对比SaaS产品与定制开发"
-      ],
-      "observations": []
-    },
-
     "background": {
-      "businessContext": "长机科技是国内插齿机细分领域第一，专业生产数控齿轮加工机床。拥有恒温装配车间、整机联机等关键设备，设备维护直接影响产品质量和交付周期",
+      "businessContext": "全球清洁能源设备龙头，电力电子转换器累计安装量870GW，储能系统出货全球前三。业务覆盖光伏逆变器、储能系统、风电变流器、新能源汽车驱动、氢能装备等板块，国内+海外双轮驱动，与EPC厂商、开发商深度合作",
       "currentChallenges": [
-        "关键设备维护依赖工人经验，缺乏标准化知识沉淀",
-        "预测性维护能力不足，设备故障难以提前预警",
-        "设备台账分散，缺乏统一的资产管理视角"
+        "供应商众多（上游电子元器件、原材料），来料质量追溯难度大，采购对账效率低",
+        "逆变器、储能柜等设备组装产线自动化程度已较高，但多产品线混产排程优化不足",
+        "储能系统出厂后需要远程运维、预测性维护、故障预警，现有能力不足",
+        "元器件成本占比高，供应链成本管控和报价决策支撑不足",
+        "海外订单交付周期长，跨境项目交期跟踪和客户协同能力缺失"
       ],
-      "triggerEvent": "数字化深化与智能制造升级期，DCMM认证后数据管理意识觉醒",
-      "currentSystems": ["西门子数控系统"],
-      "currentProcess": {
-        "overview": "现有设备维护流程依赖人工经验，巡检、维修记录纸质化或分散存储",
-        "steps": ["设备故障报修", "维修人员响应", "故障处理", "记录填写"],
-        "bottlenecks": ["维修经验难以传承", "备件库存不透明", "预防性维护计划执行困难"]
-      },
+      "triggerEvent": "光伏组件价格下跌刺激装机需求，储能市场爆发（政策强制配储），海外欧洲/东南亚/中东需求强劲，进入快速增长期",
+      "currentSystems": [],
       "painPoints": [
-        { "area": "设备管理", "description": "恒温装配、整机联机等关键设备维护依赖经验，预测性维护能力不足", "severity": "中", "source": "profile推断" }
-      ],
-      "expectedOutcomes": ["建立完整设备台账", "标准化维护流程", "提升设备可用率", "降低意外停机"]
-    },
-
-    "needs": [
-      {
-        "id": "N001",
-        "category": "设备台账",
-        "title": "设备全生命周期台账管理",
-        "description": "建立覆盖设备采购、安装、调试、运行、维护、报废的全生命周期台账",
-        "priority": "must-have",
-        "source": "customer-stated",
-        "confidence": "high",
-        "status": "active",
-        "acceptanceCriteria": ["支持设备分类编码", "支持设备技术参数档案", "支持设备位置变动追踪"]
-      },
-      {
-        "id": "N002",
-        "category": "维护管理",
-        "title": "预防性维护计划",
-        "description": "基于设备类型和运行时长，自动生成预防性维护计划，支持周期性工单",
-        "priority": "must-have",
-        "source": "profile-inference",
-        "confidence": "medium",
-        "status": "active",
-        "acceptanceCriteria": ["支持按时间/计量值触发", "支持维护模板复用", "支持工单自动生成"]
-      },
-      {
-        "id": "N003",
-        "category": "维修管理",
-        "title": "维修工单全流程管理",
-        "description": "故障报修、派工、执行、验收、归档的闭环管理",
-        "priority": "must-have",
-        "source": "profile-inference",
-        "confidence": "medium",
-        "status": "active",
-        "acceptanceCriteria": ["支持移动端报修", "支持工单状态追踪", "支持维修知识库沉淀"]
-      },
-      {
-        "id": "N004",
-        "category": "备件管理",
-        "title": "备品备件库存管理",
-        "description": "备件入库、出库、库存预警、采购建议",
-        "priority": "should-have",
-        "source": "profile-inference",
-        "confidence": "medium",
-        "status": "active",
-        "acceptanceCriteria": ["支持备件与设备关联", "支持安全库存预警", "支持消耗统计分析"]
-      },
-      {
-        "id": "N005",
-        "category": "预测性维护",
-        "title": "设备状态监测与预警",
-        "description": "结合物联网数据，实现关键设备状态监控和异常预警",
-        "priority": "should-have",
-        "source": "profile-inference",
-        "confidence": "low",
-        "status": "active",
-        "acceptanceCriteria": ["支持设备运行数据采集", "支持阈值预警", "支持趋势分析"]
-      },
-      {
-        "id": "N006",
-        "category": "系统集成",
-        "title": "与西门子数控系统集成",
-        "description": "从西门子系统获取设备运行数据，实现数据驱动的设备管理",
-        "priority": "should-have",
-        "source": "profile-inference",
-        "confidence": "low",
-        "status": "active",
-        "acceptanceCriteria": ["支持标准接口对接", "支持数据实时同步", "支持数据清洗转换"]
-      },
-      {
-        "id": "N007",
-        "category": "移动应用",
-        "title": "移动端巡检与报修",
-        "description": "支持手机/平板进行设备巡检、故障报修、工单处理",
-        "priority": "nice-to-have",
-        "source": "sales-observation",
-        "confidence": "low",
-        "status": "active",
-        "acceptanceCriteria": ["支持离线操作", "支持扫码定位", "支持拍照附件"]
-      },
-      {
-        "id": "N008",
-        "category": "报表分析",
-        "title": "设备管理分析报表",
-        "description": "设备OEE分析、故障分析、维护成本分析、备件消耗分析",
-        "priority": "should-have",
-        "source": "profile-inference",
-        "confidence": "medium",
-        "status": "active",
-        "acceptanceCriteria": ["支持自定义报表", "支持数据可视化", "支持导出"]
-      }
-    ],
-
-    "users": [
-      {
-        "role": "设备管理员",
-        "responsibilities": ["设备台账维护", "维护计划制定", "报表分析"],
-        "painPoints": ["数据分散难以统计", "手工工作量大"],
-        "frequency": "每日"
-      },
-      {
-        "role": "维修工程师",
-        "responsibilities": ["故障处理", "预防性维护执行"],
-        "painPoints": ["维修经验难以查询", "工单流转不透明"],
-        "frequency": "每日"
-      },
-      {
-        "role": "设备操作工",
-        "responsibilities": ["日常点检", "故障报修"],
-        "painPoints": ["报修流程繁琐", "进度无法追踪"],
-        "frequency": "每班次"
-      },
-      {
-        "role": "采购/仓储",
-        "responsibilities": ["备件采购", "库存管理"],
-        "painPoints": ["备件需求不明确", "库存积压与缺货并存"],
-        "frequency": "每周"
-      }
-    ],
-
-    "scope": {
-      "inScope": [
-        "设备台账管理",
-        "维护计划管理",
-        "维修工单管理",
-        "备品备件管理",
-        "设备报表分析"
-      ],
-      "outOfScope": [
-        "生产计划管理",
-        "质量管理",
-        "人力资源管理"
-      ],
-      "futureScope": [
-        "预测性维护（二期）",
-        "数字孪生（远期）"
-      ],
-      "phases": [
         {
-          "phase": "一期",
-          "focus": "基础设备台账+工单管理",
-          "timeline": "待确认"
+          "area": "供应链管理",
+          "description": "供应商众多（上游电子元器件、原材料），来料质量追溯、采购对账效率提升需求明显",
+          "severity": "高"
         },
         {
-          "phase": "二期",
-          "focus": "预测性维护+移动应用",
-          "timeline": "待确认"
+          "area": "设备管理",
+          "description": "出厂设备（尤其储能系统）需要远程运维、预测性维护、故障预警能力",
+          "severity": "高"
+        },
+        {
+          "area": "生产管理",
+          "description": "逆变器、储能柜等设备组装产线自动化程度已较高，但排产优化、柔性生产有提升空间",
+          "severity": "中"
+        },
+        {
+          "area": "成本核算",
+          "description": "元器件成本占比高，供应链成本管控、报价工具需求存在",
+          "severity": "中"
+        },
+        {
+          "area": "订单管理",
+          "description": "海外订单交付周期长，跨境项目交期跟踪、客户门户需求",
+          "severity": "中"
         }
       ],
-      "priorityMatrix": [
-        { "category": "基础管理", "priority": "P0", "items": ["设备台账", "工单管理"] },
-        { "category": "维护优化", "priority": "P1", "items": ["预防性维护", "备件管理"] },
-        { "category": "智能升级", "priority": "P2", "items": ["预测性维护", "移动应用"] }
+      "expectedOutcomes": [
+        "提升供应链协同效率，实现供应商门户全生命周期管理",
+        "建立设备IoT能力，实现储能系统/逆变器远程监控和预测性维护",
+        "优化生产排程，降低订单延误率",
+        "建立精细化成本核算体系，支撑产品线报价决策",
+        "提升海外项目交付可视化，增强客户粘性"
       ]
     },
-
-    "constraints": {
-      "budget": {
-        "total": "100万（已审批）",
-        "breakdown": [],
-        "paymentTerms": "",
-        "flexibility": "已审批，资金到位"
-      },
-      "timeline": {
-        "expectedStart": "待确认",
-        "expectedGoLive": "2026年12月31日",
-        "hardDeadline": "2026年12月31日",
-        "reason": "客户要求26年年底之前上线",
-        "flexibility": "正常"
-      },
-      "resources": {
-        "clientTeam": ["待确认"],
-        "availability": "",
-        "constraints": []
-      },
-      "technical": {
-        "existingInfrastructure": ["西门子数控系统"],
-        "mandatoryTech": [],
-        "prohibitedTech": [],
-        "networkConstraints": [],
-        "deploymentConstraints": ["需兼容现有IT架构"]
-      },
-      "organizational": {
-        "approvalProcess": "技术部门提出需求→生产/质量部门会签→采购部门评估→高层审批决策",
-        "changeManagement": "",
-        "vendorPolicies": [],
-        "complianceRequirements": []
-      }
-    },
-
-    "successCriteria": {
-      "businessCriteria": [
-        "设备意外停机时间降低20%以上",
-        "预防性维护覆盖率提升至80%",
-        "备件库存周转率提升"
-      ],
-      "technicalCriteria": [
-        "系统可用率≥99.5%",
-        "工单响应时间缩短50%",
-        "设备数据准确率≥99%"
-      ],
-      "userCriteria": [
-        "用户上手时间≤1天",
-        "移动端功能使用率≥60%",
-        "用户满意度≥80%"
-      ],
-      "projectCriteria": [
-        "按期上线",
-        "数据迁移完整准确",
-        "关键用户培训完成"
-      ],
-      "roiExpectation": {
-        "expectedBenefits": ["减少停机损失", "降低维护成本", "延长设备寿命"],
-        "paybackPeriod": "待测算",
-        "quantifiableMetrics": ["设备OEE", "MTBF", "MTTR", "备件周转率"]
-      }
-    },
-
-    "risksAndAssumptions": {
-      "risks": [
-        { "risk": "与西门子系统集成复杂度超预期", "impact": "中", "mitigation": "提前进行技术验证" },
-        { "risk": "用户对新系统接受度低", "impact": "中", "mitigation": "加强培训与试点推广" },
-        { "risk": "历史数据整理工作量巨大", "impact": "低", "mitigation": "分批迁移，先上线后完善" }
-      ],
-      "assumptions": [
-        "客户有明确的数字化转型预算支持",
-        "现有设备具备基础的数据采集能力",
-        "客户IT部门能够配合系统集成工作"
-      ],
-      "dependencies": [
-        "明确项目负责人和关键用户",
-        "现有设备清单和技术资料完整",
-        "网络基础设施满足系统运行要求"
-      ]
-    },
-
-    "solutionDirection": {
-      "overallApproach": "客户在对比SaaS与定制开发，定制开发是我们的机会，应快速输出针对性方案",
-      "recommendedApproach": {
-        "type": "定制开发（推荐）",
-        "rationale": "客户对定制开发持开放态度，可针对其装备制造业务特点深度定制，与西门子系统深度集成",
-        "alternatives": [
-          "成熟商业软件+二次开发（备选）",
-          "SaaS订阅（客户在评估，非我方优势）"
+    "needs": [
+      {
+        "id": "REQ-001",
+        "category": "business",
+        "area": "供应链管理",
+        "title": "SRM供应商管理系统",
+        "description": "建立供应商门户，实现订单协同、来料质量追溯、供应商绩效评估、对账自动化",
+        "priority": "must-have",
+        "confidence": "low",
+        "source": {
+          "type": "profile-pain-point",
+          "detail": "供应链管理痛点：供应商众多，来料质量追溯难，采购对账效率低；机会领域：SRM供应商管理"
+        },
+        "status": "active",
+        "module": "SRM",
+        "relatedPainPoints": ["供应链管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "供应商门户上线，订单协同率提升",
+          "来料检验数据可追溯至批次/供应商",
+          "供应商绩效评估体系建立"
         ]
       },
-      "technicalDirection": {
-        "architecture": "B/S架构，支持移动端",
-        "deployment": "私有化部署",
-        "techStack": ["待选型"]
+      {
+        "id": "REQ-002",
+        "category": "business",
+        "area": "设备管理",
+        "title": "设备IoT+预测性维护平台",
+        "description": "储能系统/逆变器等出厂设备接入IoT平台，实现远程监控、寿命预测、故障预警、运维工单闭环",
+        "priority": "must-have",
+        "confidence": "low",
+        "source": {
+          "type": "profile-pain-point",
+          "detail": "设备管理痛点：储能系统需要远程运维、预测性维护、故障预警；机会领域：设备IoT+预测维护；870GW累计安装量设备资产待运维"
+        },
+        "status": "active",
+        "module": "IoT平台",
+        "relatedPainPoints": ["设备管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "储能系统/逆变器设备接入率达标",
+          "故障预警准确率满足业务要求",
+          "运维工单闭环率提升"
+        ]
       },
-      "implementationStrategy": {
-        "approach": "试点先行，快速迭代",
-        "pilotScope": "总装车间关键设备",
-        "rolloutPlan": "试点→评估→全面推广"
+      {
+        "id": "REQ-003",
+        "category": "business",
+        "area": "生产管理",
+        "title": "APS高级排程系统",
+        "description": "多产品线（光伏逆变器、储能柜、风电变流器等）混产排程优化，减少订单延误，提升柔性生产能力",
+        "priority": "should-have",
+        "confidence": "low",
+        "source": {
+          "type": "profile-pain-point",
+          "detail": "生产管理痛点：排产优化、柔性生产有提升空间；机会领域：APS高级排程"
+        },
+        "status": "active",
+        "module": "APS",
+        "relatedPainPoints": ["生产管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "排程系统上线，多产品线协同排程",
+          "订单延误率下降",
+          "产能利用率提升"
+        ]
       },
-      "nextSteps": [
-        "尽快输出EAM定制开发方案，抢占先机",
-        "明确项目决策链和关键干系人",
-        "了解客户在评估的SaaS产品情况，制定差异化策略",
-        "收集详细设备清单和技术资料"
-      ]
-    },
-
-    "pendingQuestions": [
-      { "id": "Q003", "question": "项目决策人和关键干系人是谁？", "priority": "高", "category": "决策" },
-      { "id": "Q004", "question": "客户在评估哪些SaaS产品？进展如何？", "priority": "高", "category": "竞对" },
-      { "id": "Q005", "question": "设备数量和类型分布？", "priority": "中", "category": "技术" },
-      { "id": "Q006", "question": "是否有现成的设备台账数据？", "priority": "中", "category": "数据" },
-      { "id": "Q007", "question": "与西门子系统的对接要求？", "priority": "中", "category": "技术" },
-      { "id": "Q008", "question": "是否需要移动端？支持哪些平台？", "priority": "低", "category": "功能" },
-      { "id": "Q009", "question": "付款方式和节点？", "priority": "中", "category": "商务" }
+      {
+        "id": "REQ-004",
+        "category": "business",
+        "area": "成本核算",
+        "title": "产品线精细化成本核算系统",
+        "description": "建立以元器件为基础的成本核算体系，支持产品线成本分析、报价决策、利标测算",
+        "priority": "should-have",
+        "confidence": "low",
+        "source": {
+          "type": "profile-pain-point",
+          "detail": "成本核算痛点：元器件成本占比高，供应链成本管控、报价工具需求存在；机会领域：成本核算系统"
+        },
+        "status": "active",
+        "module": "成本核算",
+        "relatedPainPoints": ["成本核算"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "产品线成本核算精细度达到元器件级别",
+          "报价决策支撑能力建立",
+          "成本分析报表输出"
+        ]
+      },
+      {
+        "id": "REQ-005",
+        "category": "business",
+        "area": "订单管理",
+        "title": "海外项目交付管理平台",
+        "description": "支持跨境项目交期跟踪、客户门户（订单进度可视化）、出口单证管理，提升海外客户满意度",
+        "priority": "should-have",
+        "confidence": "low",
+        "source": {
+          "type": "profile-pain-point",
+          "detail": "订单管理痛点：海外订单交付周期长，跨境项目交期跟踪、客户门户需求；业务策略：国内+海外双轮驱动"
+        },
+        "status": "active",
+        "module": "海外项目",
+        "relatedPainPoints": ["订单管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "海外项目交期跟踪可视化",
+          "客户门户上线",
+          "出口单证管理规范化"
+        ]
+      },
+      {
+        "id": "REQ-006",
+        "category": "business",
+        "area": "质量管理",
+        "title": "全面质量管理体系",
+        "description": "建立来料、制程、成品、出货全流程质量管控，支持质量追溯、质量分析、质量预警",
+        "priority": "should-have",
+        "confidence": "low",
+        "source": {
+          "type": "inferred",
+          "detail": "基于供应链管理（高优先级）和设备管理（高优先级）推断；产品质量是设备制造企业核心竞争力"
+        },
+        "status": "active",
+        "module": "质量管理",
+        "relatedPainPoints": ["供应链管理", "设备管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "质量全流程追溯覆盖率达标",
+          "质量问题闭环率提升",
+          "质量分析报表输出"
+        ]
+      },
+      {
+        "id": "REQ-007",
+        "category": "business",
+        "area": "仓储管理",
+        "title": "WMS智能仓储管理系统",
+        "description": "元器件按需管理、库存预警、呆滞料识别、与采购协同优化库存周转",
+        "priority": "should-have",
+        "confidence": "low",
+        "source": {
+          "type": "profile-pain-point",
+          "detail": "机会领域：WMS智能仓储；供应商众多导致元器件品类多，库存管理难度大"
+        },
+        "status": "active",
+        "module": "WMS",
+        "relatedPainPoints": ["供应链管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "元器件库存准确率提升",
+          "呆滞料识别率达标",
+          "库存周转率改善"
+        ]
+      },
+      {
+        "id": "REQ-008",
+        "category": "business",
+        "area": "服务管理",
+        "title": "服务履约管理平台",
+        "description": "建立设备出厂后服务履约管理（质保期管理、服务工单、服务商协同、备件管理）",
+        "priority": "could-have",
+        "confidence": "low",
+        "source": {
+          "type": "inferred",
+          "detail": "基于设备IoT+预测维护推断；870GW设备资产需要配套服务履约管理能力"
+        },
+        "status": "active",
+        "module": "服务管理",
+        "relatedPainPoints": ["设备管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "服务工单闭环率提升",
+          "质保期管理规范化",
+          "服务商协同效率改善"
+        ]
+      },
+      {
+        "id": "REQ-009",
+        "category": "technical",
+        "area": "数据治理",
+        "title": "主数据管理平台（MDM）",
+        "description": "建立供应商、物料、产品、客户、项目等核心主数据统一治理，打通数据孤岛",
+        "priority": "must-have",
+        "confidence": "low",
+        "source": {
+          "type": "inferred",
+          "detail": "推断需求；多业务系统集成需要统一主数据治理；上市公司数据合规要求"
+        },
+        "status": "active",
+        "module": "MDM",
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "主数据标准化覆盖率达标",
+          "主数据统一管理平台上线",
+          "数据质量监控机制建立"
+        ]
+      },
+      {
+        "id": "REQ-010",
+        "category": "technical",
+        "area": "系统集成",
+        "title": "企业系统集成平台（ESB/API网关）",
+        "description": "打通ERP、MES、SCM、WMS等核心系统，实现业务数据贯通",
+        "priority": "must-have",
+        "confidence": "low",
+        "source": {
+          "type": "inferred",
+          "detail": "推断需求；多个业务系统需要数据互通；机会领域涉及SRM、APS、WMS等多个系统建设"
+        },
+        "status": "active",
+        "module": "ESB/API网关",
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "核心系统API接口标准化",
+          "关键业务数据流贯通",
+          "系统集成监控机制建立"
+        ]
+      },
+      {
+        "id": "REQ-011",
+        "category": "technical",
+        "area": "数据分析",
+        "title": "企业数据分析平台",
+        "description": "建立经营分析、生产分析、质量分析、设备分析等主题数据模型，支撑管理决策",
+        "priority": "should-have",
+        "confidence": "low",
+        "source": {
+          "type": "inferred",
+          "detail": "推断需求；大型制造企业数字化成熟度提升需要数据分析能力；上市公司信息披露需要数据支撑"
+        },
+        "status": "active",
+        "module": "数据分析平台",
+        "relatedPainPoints": [],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "核心业务主题分析模型建立",
+          "经营驾驶舱上线",
+          "数据资产目录完善"
+        ]
+      },
+      {
+        "id": "REQ-012",
+        "category": "technical",
+        "area": "基础设施",
+        "title": "工业物联网平台",
+        "description": "提供设备接入协议适配、边缘数据处理、时序数据存储等能力，支撑设备IoT应用",
+        "priority": "must-have",
+        "confidence": "low",
+        "source": {
+          "type": "profile-opportunity",
+          "detail": "机会领域：设备IoT+预测维护需要工业物联网平台底座；870GW电力电子转换器设备接入需求"
+        },
+        "status": "active",
+        "module": "IoT平台",
+        "relatedPainPoints": ["设备管理"],
+        "firstVersion": "v0.1",
+        "lastUpdated": "v0.1",
+        "history": [],
+        "acceptanceCriteria": [
+          "IoT平台支持多种设备接入协议",
+          "设备接入规模化支撑能力",
+          "时序数据存储和查询性能达标"
+        ]
+      }
     ],
-
-    "completionRate": {
-      "overall": 50,
-      "byCategory": {
-        "业务背景": 60,
-        "功能需求": 40,
-        "用户角色": 50,
-        "项目范围": 50,
-        "约束条件": 60,
-        "成功标准": 30,
-        "商务条件": 50
+    "users": [
+      {
+        "role": "采购部",
+        "description": "负责供应商管理、采购执行、来料质量管控",
+        "mainTasks": ["供应商管理", "采购执行", "来料质量管控"]
       },
-      "blockers": ["决策人未明确", "竞对SaaS产品情况未知"]
+      {
+        "role": "生产部",
+        "description": "负责生产排程、生产执行、车间管理",
+        "mainTasks": ["生产排程", "生产执行", "车间管理"]
+      },
+      {
+        "role": "售后服务部",
+        "description": "负责设备出厂后运维、故障处理、服务履约",
+        "mainTasks": ["设备运维", "故障处理", "服务履约"]
+      },
+      {
+        "role": "海外业务部",
+        "description": "负责海外订单执行、出口单证、客户协同",
+        "mainTasks": ["海外订单执行", "出口单证", "客户协同"]
+      },
+      {
+        "role": "财务部",
+        "description": "负责成本核算、报价决策、财务分析",
+        "mainTasks": ["成本核算", "报价决策", "财务分析"]
+      },
+      {
+        "role": "质量管理部",
+        "description": "负责全流程质量管控、质量分析、质量追溯",
+        "mainTasks": ["质量管控", "质量分析", "质量追溯"]
+      },
+      {
+        "role": "IT部",
+        "description": "负责系统建设、数据治理、技术支撑",
+        "mainTasks": ["系统建设", "数据治理", "技术支撑"]
+      }
+    ],
+    "constraints": {
+      "budget": {
+        "description": "上市公司，需考虑投资回报率",
+        "assumptions": []
+      },
+      "timeline": {
+        "description": "快速增长期，市场窗口期重要，需分阶段交付",
+        "assumptions": ["可能存在分阶段上线需求"]
+      },
+      "technical": {
+        "description": "设备种类多（光伏逆变器、储能柜、风电变流器等），协议适配复杂；海外业务需考虑多语言/多时区/多币种",
+        "assumptions": ["设备IoT接入需要协议适配；海外系统需全球化支持"]
+      },
+      "organizational": {
+        "description": "上市公司集团架构，多层级决策链；各业务线VP/区域/子公司可能有独立IT需求",
+        "assumptions": ["需考虑与现有组织架构适配；可能需要分子公司/区域部署"]
+      }
+    },
+    "pendingQuestions": [
+      {
+        "id": "PQ-001",
+        "category": "现状",
+        "priority": "必问",
+        "question": "贵司目前供应链管理使用什么系统？采购、仓库、质量检验各环节的信息化水平如何？",
+        "purpose": "评估现有系统能力，确定SRM/WMS/质量系统建设起点",
+        "expectedDirection": "了解现有SAP/Oracle等ERP使用情况，以及各环节信息化覆盖率",
+        "targetPerson": "采购部/IT部",
+        "relatedNeedIds": ["REQ-001", "REQ-006", "REQ-007"],
+        "status": "pending"
+      },
+      {
+        "id": "PQ-002",
+        "category": "预算",
+        "priority": "必问",
+        "question": "今年数字化/IT预算大概在什么量级？对本次合作的投入有什么初步想法？",
+        "purpose": "了解预算范围，评估项目规模",
+        "expectedDirection": "了解预算量级（百万级/千万级），判断可覆盖范围",
+        "targetPerson": "IT部/财务部",
+        "relatedNeedIds": [],
+        "status": "pending"
+      },
+      {
+        "id": "PQ-003",
+        "category": "决策",
+        "priority": "必问",
+        "question": "本次数字化建设由哪个部门主导？最终决策链是怎样的？",
+        "purpose": "明确决策流程，识别关键决策人",
+        "expectedDirection": "识别是IT部门主导还是业务部门主导，决策链层级",
+        "targetPerson": "IT部/总裁办",
+        "relatedNeedIds": [],
+        "status": "pending"
+      },
+      {
+        "id": "PQ-004",
+        "category": "优先级",
+        "priority": "必问",
+        "question": "在供应链管理、设备运维、海外交付这几个方向中，哪个是当前最痛、最想先解决的？",
+        "purpose": "确定优先级，聚焦切入点",
+        "expectedDirection": "明确核心痛点，确定一期切入点",
+        "targetPerson": "业务部门/高层",
+        "relatedNeedIds": ["REQ-001", "REQ-002", "REQ-005"],
+        "status": "pending"
+      },
+      {
+        "id": "PQ-005",
+        "category": "技术",
+        "priority": "必问",
+        "question": "现有设备（储能系统、逆变器）的通信协议和数据采集条件如何？是否具备IoT接入基础？",
+        "purpose": "评估IoT建设难度和技术方案",
+        "expectedDirection": "了解设备通信协议（Modbus/OPCUA等）、是否已有数据采集系统",
+        "targetPerson": "IT部/设备部",
+        "relatedNeedIds": ["REQ-002", "REQ-012"],
+        "status": "pending"
+      },
+      {
+        "id": "PQ-006",
+        "category": "现状",
+        "priority": "选问",
+        "question": "现有生产排程是如何做的？有没有使用APS或类似系统？",
+        "purpose": "评估APS建设起点",
+        "expectedDirection": "了解现有排程方式（Excel/APS/人工），判断建设难度",
+        "targetPerson": "生产部/IT部",
+        "relatedNeedIds": ["REQ-003"],
+        "status": "pending"
+      },
+      {
+        "id": "PQ-007",
+        "category": "技术",
+        "priority": "选问",
+        "question": "海外业务涉及哪些国家和地区？是否已有本地化系统或合规要求？",
+        "purpose": "评估海外业务系统建设要求",
+        "expectedDirection": "了解海外部署区域，合规要求（GDPR等）",
+        "targetPerson": "海外业务部/IT部",
+        "relatedNeedIds": ["REQ-005"],
+        "status": "pending"
+      },
+      {
+        "id": "PQ-008",
+        "category": "现状",
+        "priority": "选问",
+        "question": "成本核算目前精细度如何？是以产品线还是以单个项目为主？",
+        "purpose": "评估成本核算系统建设起点",
+        "expectedDirection": "了解现有成本核算精细度，判断建设路径",
+        "targetPerson": "财务部",
+        "relatedNeedIds": ["REQ-004"],
+        "status": "pending"
+      },
+      {
+        "id": "PQ-009",
+        "category": "组织",
+        "priority": "选问",
+        "question": "各子公司/区域是否独立运营IT系统？还是集团统一集权管理？",
+        "purpose": "评估系统部署架构",
+        "expectedDirection": "了解是集中式还是分布式架构，子公司自主权",
+        "targetPerson": "IT部",
+        "relatedNeedIds": ["REQ-009", "REQ-010"],
+        "status": "pending"
+      },
+      {
+        "id": "PQ-010",
+        "category": "数据",
+        "priority": "选问",
+        "question": "对数据安全和合规有什么特殊要求？特别是海外业务数据是否需要本地化存储？",
+        "purpose": "评估数据安全和合规要求",
+        "expectedDirection": "了解数据安全等级，是否需要跨境数据合规",
+        "targetPerson": "IT部/法务部",
+        "relatedNeedIds": ["REQ-009", "REQ-010"],
+        "status": "pending"
+      }
+    ],
+    "completionRate": {
+      "overall": 22,
+      "byCategory": {
+        "background": 80,
+        "needs": 50,
+        "users": 30,
+        "constraints": 25,
+        "pendingQuestions": 50
+      },
+      "blockers": [
+        "缺少现有IT系统详细信息",
+        "缺少预算和时间线信息",
+        "缺少决策链确认",
+        "缺少技术架构现状（设备协议、数据采集能力）",
+        "缺少组织架构和子公司IT建设情况"
+      ]
     }
   },
-
   "metadata": {
-    "createdAt": "2026-03-25T00:00:00.000Z",
-    "updatedAt": "2026-03-25T10:30:00.000Z",
+    "createdAt": "2026-03-31T00:00:00.000Z",
+    "updatedAt": "2026-03-31T00:00:00.000Z",
     "createdBy": "AI",
     "version": "1.0"
   }
