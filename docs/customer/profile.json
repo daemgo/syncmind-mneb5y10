@@ -148,11 +148,11 @@
 
     "metadata": {
       "createdAt": "2026-03-31T00:00:00.000Z",
-      "updatedAt": "2026-03-31T00:00:00.000Z",
+      "updatedAt": "2026-03-31T08:00:00.000Z",
       "createdBy": "AI",
-      "version": "1.0",
-      "sources": ["公开市场数据"],
-      "confidence": 75
+      "version": "1.1",
+      "sources": ["公开市场数据", "官网 www.sungrowpower.com", "BloombergNEF"],
+      "confidence": 80
     }
   }
 }
