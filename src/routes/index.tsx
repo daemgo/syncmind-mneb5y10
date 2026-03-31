@@ -25,6 +25,7 @@ import { activityMock } from "@/mock/activity";
 import { pipelineMock } from "@/mock/pipeline";
 import { OPPORTUNITY_STAGES } from "@/types/pipeline";
 import {
+  BarChart,
   Bar,
   XAxis,
   YAxis,
