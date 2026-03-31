@@ -51,11 +51,11 @@ function formatCurrency(value: number): string {
 }
 
 const pipelineChartData = [
-  { stage: "资格确认", value: 850000, color: "hsl(var(--chart-1))" },
-  { stage: "方案报价", value: 520000, color: "hsl(var(--chart-2))" },
-  { stage: "商务谈判", value: 380000, color: "hsl(var(--chart-3))" },
-  { stage: "合同签署", value: 280000, color: "hsl(var(--chart-4))" },
-  { stage: "成交", value: 420000, color: "hsl(var(--chart-5))" },
+  { stage: "资格确认", value: 850000, color: "var(--chart-1)" },
+  { stage: "方案报价", value: 520000, color: "var(--chart-2)" },
+  { stage: "商务谈判", value: 380000, color: "var(--chart-3)" },
+  { stage: "合同签署", value: 280000, color: "var(--chart-4)" },
+  { stage: "成交", value: 420000, color: "var(--chart-5)" },
 ];
 
 const chartConfig = {
@@ -65,9 +65,9 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 const customerStageData = [
-  { status: "潜在客户", value: 2, color: "hsl(var(--chart-1))" },
-  { status: "活跃客户", value: 2, color: "hsl(var(--chart-2))" },
-  { status: "非活跃", value: 1, color: "hsl(var(--muted-foreground))" },
+  { status: "潜在客户", value: 2, color: "var(--chart-1)" },
+  { status: "活跃客户", value: 2, color: "var(--chart-2)" },
+  { status: "非活跃", value: 1, color: "var(--muted-foreground)" },
 ];
 
 const customerChartConfig = {
